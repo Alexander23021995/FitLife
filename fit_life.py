@@ -11,17 +11,15 @@ print("Позвольте уточнить Ваши данные для расч
 user_weight_kg = float(input("Ваш вес в килограммах (например, 70.5): "))
 user_height_m = float(input("Ваш рост в метрах (например, 1.75) : "))
 
-bmi = user_weight_kg / (user_height_m ** 2)
-bmi = round(bmi, 1)
+bmi = round(user_weight_kg / (user_height_m ** 2), 1)
 
-water_ml = user_weight_kg * 30
-water_liters = water_ml / 1000
-water_liters = round(water_liters, 2)
+WATER_ML = user_weight_kg * 30
+WATER_LITRES = round(WATER_ML / 1000, 2)
 
 print("Спасибо за предоставленные данные!")
 print(f"Отчет для пользователя:\n"
       f"Имя: {user_name}, возраст: {user_age} г.")
 print(f"Ваш Индекс Массы Тела: {bmi}")
-print(f"Рекомендуемая норма воды в день: {water_liters} литров")
+print(f"Рекомендуемая норма воды в день: {WATER_LITRES} литров")
 
 print("Спасибо за использование нашего приложения!")
