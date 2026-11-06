@@ -8,18 +8,18 @@ print(f"Спасибо за ответы, {user_name}!")
 print("Давайте рассчитаем Ваш индекс массы тела (ИМТ)")
 print("ИМТ рассчитывается по формуле: ИМТ = вес (кг) / (рост (м) * рост (м))")
 print("Позвольте уточнить Ваши данные для расчета ИМТ")
-user_weight_kg = float(input("Ваш вес в килограммах (например, 70.5): "))
-user_height_m = float(input("Ваш рост в метрах (например, 1.75) : "))
+USER_WEIGHT_KG = float(input("Ваш вес в килограммах (например, 70.5): "))
+USER_HEIGHT_M = float(input("Ваш рост в метрах (например, 1.75) : "))
 
-bmi = round(user_weight_kg / (user_height_m ** 2), 1)
+BMI = round(USER_WEIGHT_KG / (USER_HEIGHT_M ** 2), 1)
 
-WATER_ML = user_weight_kg * 30
+WATER_ML = USER_WEIGHT_KG * 30
 WATER_LITRES = round(WATER_ML / 1000, 2)
 
 print("Спасибо за предоставленные данные!")
 print(f"Отчет для пользователя:\n"
       f"Имя: {user_name}, возраст: {user_age} г.")
-print(f"Ваш Индекс Массы Тела: {bmi}")
+print(f"Ваш Индекс Массы Тела: {BMI}")
 print(f"Рекомендуемая норма воды в день: {WATER_LITRES} литров")
 
 print("Спасибо за использование нашего приложения!")
