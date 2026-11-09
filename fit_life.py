@@ -1,3 +1,5 @@
+WATER_ML_PER_KG = 30
+ML_PER_LITRE = 1000
 
 print("Рады приветстовать Вас в нашем приложении! Давай знакомиться!")
 
@@ -14,11 +16,8 @@ user_height_m = float(input("Ваш рост в метрах (например, 
 
 bmi = round(user_weight_kg / (user_height_m ** 2), 1)
 
-WATER_ML_PER_KG = 30
-ML_PER_LITRE = 1000
-
-water_ml = user_weight_kg * 30
-water_litres = round(water_ml / 1000, 2)
+water_ml = user_weight_kg * WATER_ML_PER_KG
+water_litres = round(water_ml / ML_PER_LITRE, 2)
 
 print("Спасибо за предоставленные данные!")
 print(f"Отчет для пользователя:\n"
